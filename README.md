@@ -12,3 +12,5 @@ This is the live version, it will refresh every 250 milliseconds and uses around
 *(Replace `socinfo.sh` with your version of choice)*
 
 I perfer to use the `sh` command to avoid permission errors but if you type `sudo chmod +x socinfo.sh` once then you can run my program with `./socinfo.sh`.  **You don't need to run this as superuser (`sudo`)**.
+
+If you are looking for a way to look at memory usage use `free -h` and to print every 10 seconds use `free -h -s 10`.
