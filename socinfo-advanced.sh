@@ -1,4 +1,5 @@
 #!/bin/bash
+#Steve's SoCinfo Tool
 clear
 while true
 do
