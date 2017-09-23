@@ -12,12 +12,12 @@ echo "###### Core ######"
 vcgencmd measure_clock core
 vcgencmd measure_volts core
 echo "#### SDRAM ####"
-vcgencmd measure_volts sdram_c
-vcgencmd measure_volts sdram_i
-vcgencmd measure_volts sdram_p
+echo "Core $(vcgencmd measure_volts sdram_c)"
+echo "I/O $(vcgencmd measure_volts sdram_i)"
+echo "PHY $(vcgencmd measure_volts sdram_p)"
 echo "#### Temp ####"
-vcgencmd measure_temp
-cat /sys/class/thermal/thermal_zone0/temp
+echo "CPU temp=$(cat /sys/class/thermal/thermal_zone0/temp)"
+echo "GPU $(vcgencmd measure_temp)"
 echo ----------
 sleep 10
 done
