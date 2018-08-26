@@ -15,6 +15,8 @@ echo "#### SDRAM ####"
 echo "Core $(vcgencmd measure_volts sdram_c)"
 echo "I/O $(vcgencmd measure_volts sdram_i)"
 echo "PHY $(vcgencmd measure_volts sdram_p)"
+echo "#### SD Card ####"
+sudo grep clock /sys/kernel/debug/mmc0/ios
 echo "#### Temp ####"
 echo "CPU temp=$(cat /sys/class/thermal/thermal_zone0/temp)"
 echo "GPU $(vcgencmd measure_temp)"
